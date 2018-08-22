@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Search movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="#">
+            <h2>Filmoteka</h2>
+        </a>
+    </nav>
+    <div id="animacija_kocke" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="jumbo"></h2>
+        </div>
+    </div>
+    <div class="jumbotron1 jumbotron-fluid">
+        <div class="container">
+            <h2 id="info">Na ovom sajtu možete pronaći sve filmove</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="input-group mb-3">
+                <input type="search" id="search" class="form-control" required placeholder="Unesite naziv filma">
+                <div class="input-group-append">
+                    <button id="searchBtn" class="btn btn-info" type="submit">
+                        <i class="ion-ios-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 id="ne-postoji" class='no-results'></h5>
+
+    <hr>
+
+    <div id="container-res" class="results">
+        <!--rezultati-->
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="movieModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 id="modalHeader" class="modal-title"></h4>
+                    <button type="button" class="close" onclick="emptyModal()" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div id="modalBody" class="modal-body">
+
+                </div>
+
+                <!-- Modal footer -->
+                <!-- <div class="modal-footer">
+                    <button type="button" onclick="emptyModal()" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+            <hr>
+            <h6>Copyright © 2018 Filmoteka Srbija. Sva prava zadržana.</h6>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

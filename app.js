@@ -109,18 +109,20 @@ function showMovieData(id) {
     });
 }
 
-
+//funkcija za brzo praznjenje modala
 function emptyModal() {
     $("#modalHeader").text("");
     $("#modalBody").text("");
 }
 
+//funkcija kada ne postoji trazeni film ili je pogresno ukucano, pozvana u okviru showMovie funkcije
 function noResults() {
     console.log(h5);
     h5.style.visibility = "visible";
     h5.innerHTML = "Željeni film nije pronađen, pokušajte ponovo.";
 }
 
+//funkcija za resetovanje HTML, pozvana u okviru showMovie funkcije
 function resetHtml() {
     divRes.parentNode.removeChild(divRes);
     h5.style.visibility = "hidden";
